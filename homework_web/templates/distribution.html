@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3> Размещение по каютам </h3>
+    {% for member in distribution["cast"] %}
+<h6> {{ member }} - каюта № {{ loop.index }} {% if loop.first %} капитан {% endif %} </h6>
+
+    {% endfor %}
+{% endblock %}

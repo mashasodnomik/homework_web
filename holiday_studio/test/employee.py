@@ -33,6 +33,7 @@ put_employee_response = requests.put(f"{base_url}/{employee_id}", json=put_data)
 print(f"Put employee {employee_id}:", put_employee_response.json()
       , "http code:", put_employee_response.status_code)
 
+employee_id = 3
 # delete employee
 delete_employee_response = requests.delete(f"{base_url}/{employee_id}")
 print(f"Delete employee {employee_id}:", delete_employee_response.content

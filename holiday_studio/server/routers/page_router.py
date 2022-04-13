@@ -55,6 +55,12 @@ def create_client():
 
     return render_template("create_client.html", title="Создание клиента", form=create_client_form)
 
+@router.route("/create_order", methods=["GET", "POST"])
+@login_required
+def create_order():
+    create_order_form = CreateOrderForm()
+    if create_order_form.validate_on_submit():
+        session = create_session()
 
 @router.route("/create_order", methods=["GET", "POST"])
 @login_required
@@ -84,6 +90,7 @@ def create_order():
     return render_template("create_order.html", title="Создание заказа", form=create_order_form)
 
 
+    return render_template("create_order.html", title="Создание zakaza", form=create_order_form)
 @router.route("/logout")
 def logout():
     logout_user()
